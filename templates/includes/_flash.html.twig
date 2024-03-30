@@ -1,0 +1,11 @@
+{# templates/includes/flash_messages.html.twig #}
+
+{% for type, messages in app.flashes %}
+	{% for message in messages %}
+		<div class="alert alert-{{ type }}">
+			{{ message }}
+		</div>
+
+        {# {{ dump(message, type) }} #}
+	{% endfor %}
+{% endfor %}

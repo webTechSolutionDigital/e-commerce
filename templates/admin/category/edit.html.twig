@@ -1,0 +1,40 @@
+{% extends 'admin/admin.html.twig' %}
+
+{% block title 'Editer la categorie ' ~ category.name %}
+
+
+{% block body %}
+
+
+	<div class="container py-3 ">
+
+		<h2>
+			Modification Catégorie : {{ category.name }}
+		</h2>
+
+		{# {{ form(form, {'method': 'POST'}) }} #}
+
+
+		{{ form_start(form) }}
+
+		<div class="row text-center">
+
+			<div class="col">
+
+				{{ form_row(form.name) }}
+			</div>
+
+			
+
+
+		</div>
+
+		{{ form_end(form) }}
+
+		<button class=" btn btn-info">
+			<a href="{{ path('admin_app_category' )}}">Retour</a>
+		</button>
+
+	</div>
+
+{% endblock %}

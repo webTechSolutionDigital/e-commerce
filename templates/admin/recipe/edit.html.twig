@@ -1,0 +1,47 @@
+{% extends 'admin/admin.html.twig' %}
+
+{% block title 'Editer la recette ' ~ recipe.title %}
+
+{% block body %}
+
+
+	<div class="container py-3 ">
+
+		<h1>
+			Modification Recette
+		</h1>
+
+		{# {{ form(form, {'method': 'POST'}) }} #}
+
+
+		{{ form_start(form) }}
+
+		<div class="row text-center">
+
+			<div class="col">
+
+				{{ form_row(form.title) }}
+
+				{{ form_row(form.content) }}
+				{{ form_row(form.slug) }}
+
+				<img src="{{ vich_uploader_asset(recipe, 'thumbnailFile') }}" alt="{{ recipe.title }}">
+
+
+
+
+			</div>
+
+
+		</div>
+
+		{{ form_end(form) }}
+
+		<button class=" btn btn-info">
+			<a href="{{ path('admin_app_recipe' )}}">Retour</a>
+		</button>
+
+	</div>
+
+
+{% endblock %}

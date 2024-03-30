@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title " Recette : " ~ recipeAll.title %}
+{# {% endblock %} #}
+
+{% block body %}
+
+	<h1>
+		Recette  :
+
+	</h1>
+
+	<p>
+		{{ recipeAll.title | upper}}
+	</p>
+
+	<h2>
+		Description  de la recette :
+	</h2>
+
+	<p>
+		{{ recipeAll.content | nl2br }}
+	</p>
+
+	
+	<button class=" btn btn-info"><a href="{{ path('app_main' )}}">Retour</a></button>
+{% endblock %}

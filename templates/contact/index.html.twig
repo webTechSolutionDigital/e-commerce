@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nous Contacter
+{% endblock %}
+
+{% block body %}
+
+
+	<div class="container py-3">
+
+		<h1>
+			Nous Contacter
+		</h1>
+
+
+		{{ form_start(form) }}
+
+		<div class="row">
+
+			<div class="col">
+
+				{{ form_row(form.email) }}
+				{{ form_row(form.name) }}
+				{{ form_row(form.subject) }}
+				{{ form_row(form.message) }}
+				{{ form_row(form.service) }}
+			</div>
+           
+
+		</div>
+
+		{{ form_end(form) }}
+
+		<button class=" btn btn-info">
+			<a href="{{ path('app_main' )}}">Retour</a>
+		</button>
+
+	</div>
+
+{% endblock %}

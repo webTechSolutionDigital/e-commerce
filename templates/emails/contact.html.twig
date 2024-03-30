@@ -1,0 +1,31 @@
+{# templates/emails/signup.html.twig #}
+<h1>Une nouvelle demande de contact reçu de :
+	{{ data.name }}!</h1>
+
+<p>
+	<strong>Vous vous êtes inscrit(e) avec l'email suivant :
+	</strong>
+	{{ data.email }}
+
+</p>
+
+<p>
+	<strong>
+		Sujet
+	</strong>
+	:
+	<br>{{ data.subject|nl2br }}
+</p>
+
+<p>
+	<strong>
+		Message
+	</strong>
+	:
+	<br>{{ data.message|nl2br }}
+</p>
+
+
+<a href="#">Cliquez ici pour activer votre compte</a>
+(ce lien est valable jusqu'à
+{{ expiration_date|date('F jS') }})</p>
